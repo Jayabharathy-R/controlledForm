@@ -1,0 +1,8 @@
+#body{
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  font-size: 20px;
+  border: black 1px solid;
+  padding: 50px 100px;
+}
