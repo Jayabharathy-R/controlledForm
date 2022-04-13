@@ -3,8 +3,8 @@ import './index.css';
 
 
 export default function App() {
-  const [state,setState]=useState({firstName:" ",lastName:" ",email:" ",gender:" ",courses:"react"});
-  const [error,setError]=useState({firstName:" ",lastName:" ",email:" ",gender:" "});
+  const [state,setState]=useState({firstName:"",lastName:"",email:"",gender:"",courses:"react"});
+  const [error,setError]=useState({firstName:"",lastName:"",email:"",gender:""});
 
 
   const handleSubmit = async (e) => {
@@ -14,7 +14,7 @@ export default function App() {
    await Object.keys(state).map(key=>{
     
         //setError({...error,[key]: key+" is required"});
-        if (state[key] === " ")
+        if (state[key] === "")
         {
           error[key]=key+" is required";
         setError(error);
@@ -30,13 +30,13 @@ export default function App() {
     
     setState({...state,[e.target.name]:e.target.value})
   
-    if (e.target.value === '')
+    if (e.target.value ==='')
     {
       await setError({...error,[e.target.name]: e.target.name+" is required"});
     
     }
     else{
-      await setError({...error,[e.target.name]: " "});
+      await setError({...error,[e.target.name]: ""});
     }
     //console.log(error)
     //console.log(state);
